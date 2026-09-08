@@ -1,0 +1,99 @@
+{
+  "name": "@typecad/ui",
+  "version": "1.0.0-alpha.17",
+  "description": "TypeCAD UI authoring library — HTML/CSS-driven graphics for microcontrollers",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "typecad-ui": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./engine": {
+      "types": "./dist/engine-index.d.ts",
+      "default": "./dist/engine-index.js"
+    },
+    "./runtime-header": {
+      "types": "./dist/ui-engine/runtime-header.d.ts",
+      "default": "./dist/ui-engine/runtime-header.js"
+    },
+    "./ui-engine/*": {
+      "types": "./dist/ui-engine/*.d.ts",
+      "default": "./dist/ui-engine/*.js"
+    },
+    "./themes/*": {
+      "default": "./themes/*"
+    },
+    "./preview/*": {
+      "types": "./dist/preview/*.d.ts",
+      "default": "./dist/preview/*.js"
+    },
+    "./wizard": {
+      "types": "./dist/wizard/index.d.ts",
+      "default": "./dist/wizard/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src",
+    "assets"
+  ],
+  "dependencies": {
+    "@typecad/cuttlefish": "1.0.0-alpha.17",
+    "chalk": "^6.0.0",
+    "css-tree": "^3.2.1",
+    "decode-ico": "^0.4.1",
+    "linkedom": "^0.18.12",
+    "opentype.js": "^2.0.0",
+    "sharp": "^0.35.3",
+    "typescript": "^5.7.3",
+    "yoga-layout": "^3.2.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justind000/typecode.git",
+    "directory": "packages/ui"
+  },
+  "homepage": "https://github.com/justind000/typecode/tree/main/packages/ui",
+  "bugs": {
+    "url": "https://github.com/justind000/typecode/issues"
+  },
+  "keywords": [
+    "arduino",
+    "embedded",
+    "microcontroller",
+    "esp32",
+    "tft",
+    "ili9341",
+    "ui",
+    "html",
+    "css",
+    "gui",
+    "typecad",
+    "cuttlefish",
+    "typescript",
+    "cpp",
+    "firmware"
+  ],
+  "engines": {
+    "node": ">=22.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "@types/opentype.js": "^1.3.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "typecad0"
+}
